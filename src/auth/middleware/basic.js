@@ -5,11 +5,11 @@ const { user } = require('../models/index.js');
 
 module.exports = async (req, res, next) => {
 
-  if (!req.headers.authorization) { return user(); }
+  if (!req.headers.authorization) { next('auth error'); }
 
   let basic = req.headers.authorization;
-  let [username, pass] = base64.decode(basic).split(':');
-
+  // let decoded = base64.decode(basic.split(' ').pop());
+  let [username, pass] = base64.decode(basic.split(' ').pop()).split(':');
   try {
     req.user = await user.authenticateBasic(username, pass);
     next();

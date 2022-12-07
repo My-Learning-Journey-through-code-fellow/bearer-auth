@@ -39,6 +39,5 @@
   "bugs": {
     "url": "https://github.com/TraceDugar/bearer-auth/issues"
   },
-  "homepage": "https://github.com/TraceDugar/bearer-auth#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/TraceDugar/bearer-auth#readme"
 }
